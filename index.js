@@ -34,7 +34,11 @@ window.addEventListener("load", () => {
   motionBtnAfter.innerHTML = motion.length;
 
   /* script Counter Numbers Animation */
-  const end = allStyles.length;
+  const end1 = allStyles.length;
+  const end2 = design.length;
+  const end3 = branding.length;
+  const end4 = illustration.length;
+  const end5 = motion.length;
   function animateValue(obj, start, end, duration) {
     let startTimestamp = null;
     const step = (timestamp) => {
@@ -48,8 +52,16 @@ window.addEventListener("load", () => {
     window.requestAnimationFrame(step);
   }
 
-  const obj = document.querySelector(".all-count");
-  animateValue(obj, 0, end, 1000);
+  const obj1 = document.querySelector(".all-count");
+  animateValue(obj1, 0, end1, 1000);
+  const obj2 = document.querySelector(".design-count");
+  animateValue(obj2, 0, end2, 1000);
+  const obj3 = document.querySelector(".branding-count");
+  animateValue(obj3, 0, end3, 1000);
+  const obj4 = document.querySelector(".illustration-count");
+  animateValue(obj4, 0, end4, 1000);
+  const obj5 = document.querySelector(".motion-count");
+  animateValue(obj5, 0, end5, 1000);
 });
 
 /* ===> script for filter buttons, show images for each section of gallery <=== */
