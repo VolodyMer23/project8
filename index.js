@@ -1,5 +1,5 @@
-// var showMore = document.querySelectorAll(".img__wrapper");
-// var showMoreBtn = document.querySelector(".showmore-btn");
+// const showMore = document.querySelectorAll(".img__wrapper");
+// const showMoreBtn = document.querySelector(".showmore-btn");
 // var elementsQuant = 2;
 // showMoreBtn.addEventListener("click", function () {
 //   for (var i = elementsQuant; i < elementsQuant + 2; i++) {
@@ -16,7 +16,7 @@
 
 
 
-
+/* ===> script for uppertext on filter buttons, calculace quantity of images in each section <=== */
 window.addEventListener("load", () => {
   const design = document.querySelectorAll(".img--design");
   const branding = document.querySelectorAll(".img--branding");
@@ -41,6 +41,8 @@ window.addEventListener("load", () => {
   console.log(allBtnAfter);
 });
 
+
+/* ===> script for filter buttons, show images for each section of gallery <=== */
 const filterBtn = document.querySelector(".portfolio__filters");
 const filterCat = document.querySelectorAll(".img__wrapper");
 
