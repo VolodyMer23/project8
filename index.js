@@ -1,18 +1,3 @@
-// const showMore = document.querySelectorAll(".img__wrapper");
-// const showMoreBtn = document.querySelector(".showmore-btn");
-// var elementsQuant = 2;
-// showMoreBtn.addEventListener("click", function () {
-//   for (var i = elementsQuant; i < elementsQuant + 2; i++) {
-//     if (showMore[i]) {
-//       showMore[i].style.display = "block";
-//     }
-//   }
-//   elementsQuant += 2;
-//   if (elementsQuant >= showMore.length) {
-//     showMoreBtn.style.display = "none";
-//   }
-// });
-
 /* ===> script for uppertext on filter buttons, calculace quantity of images in each section <=== */
 window.addEventListener("load", () => {
   const design = document.querySelectorAll(".img--design");
@@ -39,6 +24,13 @@ window.addEventListener("load", () => {
   const end3 = branding.length;
   const end4 = illustration.length;
   const end5 = motion.length;
+
+  const obj1 = document.querySelector(".all-count");
+  const obj2 = document.querySelector(".design-count");
+  const obj3 = document.querySelector(".branding-count");
+  const obj4 = document.querySelector(".illustration-count");
+  const obj5 = document.querySelector(".motion-count");
+
   function animateValue(obj, start, end, duration) {
     let startTimestamp = null;
     const step = (timestamp) => {
@@ -51,16 +43,10 @@ window.addEventListener("load", () => {
     };
     window.requestAnimationFrame(step);
   }
-
-  const obj1 = document.querySelector(".all-count");
   animateValue(obj1, 0, end1, 1000);
-  const obj2 = document.querySelector(".design-count");
   animateValue(obj2, 0, end2, 1000);
-  const obj3 = document.querySelector(".branding-count");
   animateValue(obj3, 0, end3, 1000);
-  const obj4 = document.querySelector(".illustration-count");
   animateValue(obj4, 0, end4, 1000);
-  const obj5 = document.querySelector(".motion-count");
   animateValue(obj5, 0, end5, 1000);
 });
 
