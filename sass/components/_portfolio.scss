@@ -99,7 +99,7 @@ img {
 }
 
 .portfolio__wrapper .img__wrapper.show {
-    display: block;
+    display: flex;
     animation: animate 500ms ease;
 }
 
@@ -122,12 +122,12 @@ img {
   overflow: hidden;
   box-shadow: 0px 0px 15px 0px #191A30;
 
-  &:nth-child(1) {
-    display: block;
+  &:nth-child(-n+4) {
+    display: flex;
   }
-  &:nth-child(2) {
-    display: block;
-  }
+//   &:nth-child(2) {
+//     display: flex;
+//   }
 //   &:nth-child(4n + 4),
 //   &:nth-child(4n + 1) {
 //     width: 670px;

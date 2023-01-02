@@ -1,17 +1,21 @@
-var showMore = document.querySelectorAll(".img__wrapper");
-var showMoreBtn = document.querySelector(".showmore-btn");
-var elementsQuant = 2;
-showMoreBtn.addEventListener("click", function () {
-  for (var i = elementsQuant; i < elementsQuant + 2; i++) {
-    if (showMore[i]) {
-      showMore[i].style.display = "block";
-    }
-  }
-  elementsQuant += 2;
-  if (elementsQuant >= showMore.length) {
-    showMoreBtn.style.display = "none";
-  }
-});
+// var showMore = document.querySelectorAll(".img__wrapper");
+// var showMoreBtn = document.querySelector(".showmore-btn");
+// var elementsQuant = 2;
+// showMoreBtn.addEventListener("click", function () {
+//   for (var i = elementsQuant; i < elementsQuant + 2; i++) {
+//     if (showMore[i]) {
+//       showMore[i].style.display = "block";
+//     }
+//   }
+//   elementsQuant += 2;
+//   if (elementsQuant >= showMore.length) {
+//     showMoreBtn.style.display = "none";
+//   }
+// });
+
+
+
+
 
 window.addEventListener("load", () => {
   const design = document.querySelectorAll(".img--design");
