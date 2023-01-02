@@ -13,9 +13,6 @@
 //   }
 // });
 
-
-
-
 /* ===> script for uppertext on filter buttons, calculace quantity of images in each section <=== */
 window.addEventListener("load", () => {
   const design = document.querySelectorAll(".img--design");
@@ -36,11 +33,24 @@ window.addEventListener("load", () => {
   illustrationBtnAfter.innerHTML = illustration.length;
   motionBtnAfter.innerHTML = motion.length;
 
-  console.log(design.length);
-  console.log(allStyles.length);
-  console.log(allBtnAfter);
-});
+  /* script Counter Numbers Animation */
+  const end = allStyles.length;
+  function animateValue(obj, start, end, duration) {
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      obj.innerHTML = Math.floor(progress * (end - start) + start);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
 
+  const obj = document.querySelector(".all-count");
+  animateValue(obj, 0, end, 1000);
+});
 
 /* ===> script for filter buttons, show images for each section of gallery <=== */
 const filterBtn = document.querySelector(".portfolio__filters");
@@ -51,21 +61,19 @@ window.onload = () => {
     if (selectedItem.target.classList.contains("filter-btn")) {
       filterBtn.querySelector(".active").classList.remove("active");
       selectedItem.target.classList.add("active");
-      let filterName = selectedItem.target.getAttribute("data-name")
+      let filterName = selectedItem.target.getAttribute("data-name");
 
       filterCat.forEach((img__wrapper) => {
         let filterImg = img__wrapper.getAttribute("data-name");
 
-        if ((filterImg == filterName) || filterName == "all"){
-            img__wrapper.classList.remove("hide");
-            img__wrapper.classList.add("show");
+        if (filterImg == filterName || filterName == "all") {
+          img__wrapper.classList.remove("hide");
+          img__wrapper.classList.add("show");
         } else {
-            img__wrapper.classList.add("hide");
-            img__wrapper.classList.remove("show");
+          img__wrapper.classList.add("hide");
+          img__wrapper.classList.remove("show");
         }
-        console.log(filterImg);
-      })
-      
+      });
     }
   };
 };
