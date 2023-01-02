@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #212121;
+  background-color: #ffffff;
+  font-family: var(--primary-font-family);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,74 @@
+.section {
+  margin-left: auto;
+  margin-right: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+      width: 100%;
+      padding-top: 94px;
+    padding-bottom: 94px;
+    }
+  }
+  
+  .container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    @media screen and (min-width: 480px) {
+      width: 480px;
+      display: flex;
+    }
+    
+    @media screen and (min-width: 768px) {
+      width: 768px;
+      display: flex;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 1200px;
+      display: flex;
+    }
+  }
+  
+  .item {
+    display: block;
+  }
+  
+  .btn {
+    cursor: pointer;
+  }
+  
+  .section-title,
+  .services__title,
+  .team__title,
+  .clients__title,
+  .portfolio__title {
+    color: var(--primary-text-color);
+    font-size: 28px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+    text-align: center;
+
+    @media screen and (min-width:1200px) {
+      font-size: 36px;
+    }
+  }
+  
+  .list {
+    list-style: none;
+    
+  }
+  
+  .link {
+    text-decoration: none;
+    color: currentColor;
+  }
+
+  .no-scroll {
+    overflow: hidden;
+  }
